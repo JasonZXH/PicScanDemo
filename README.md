@@ -1,4 +1,4 @@
-https://github.com/JasonZXH/Pictures/picScanGif.gif
+https://github.com/JasonZXH/Pictures/DefaultGrid.png
 # Usage
 1、copy 
 ZXHPicScan.h
