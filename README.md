@@ -1,11 +1,11 @@
-# PicScanDemo
-图片浏览
+# Usage
 1、copy 
 ZXHPicScan.h
 ZXHPicScan.m
 ZXHPicScanViewController.h
 ZXHPicScanViewController.m
 2、Add the following import to the top of the file:
+```
 #import "ZXHPicScan.h"
 @interface RootViewController ()<ZXHPicScanDelegate>
 {
@@ -25,3 +25,4 @@ ZXHPicScanViewController.m
 - (void)disappearThePicScan {
     _zxhPicScan = nil;
 }
+```
