@@ -1,4 +1,4 @@
-![http://teacher.3xy.com.cn/sxyAdminData/images/resource/jpg/200805/200805201507101075.jpg]
+![image](https://github.com/JasonZXH/Pictures-master/picScanGif.gif)
 # Usage
 1、copy 
 ZXHPicScan.h
