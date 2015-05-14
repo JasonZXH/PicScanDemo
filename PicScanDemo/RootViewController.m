@@ -3,16 +3,27 @@
 //  PicScanDemo
 //
 //  Created by ZXH on 15/5/14.
-//  Copyright (c) 2015年 ZSXJ. All rights reserved.
+//  Copyright (c) 2015年 大毛集团. All rights reserved.
 //
 
 #import "RootViewController.h"
 #import "RootCell.h"
-
 #import "ZXHPicScan.h"
 
 #define BACK_COLOR      [UIColor colorWithRed:239/255.0F green:243/255.0F blue:241/255.0F alpha:1.0F]
-
+/**
+ *  用法:
+ *  #import "RootCell.h"
+ *
+ *  @interface RootViewController () <ZXHPicScanDelegate> {
+ *
+ *      ZXHPicScan *_zxhPicScan;
+ *  }
+ *
+ *  调用方法参见 90--103 行代码
+ *
+ *
+ */
 @interface RootViewController ()
 <
 UITableViewDelegate,

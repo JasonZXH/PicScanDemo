@@ -3,7 +3,7 @@
 //  PicScanDemo
 //
 //  Created by ZXH on 15/5/14.
-//  Copyright (c) 2015年 ZSXJ. All rights reserved.
+//  Copyright (c) 2015年 大毛集团. All rights reserved.
 //
 
 #import "ZXHPicScanViewController.h"

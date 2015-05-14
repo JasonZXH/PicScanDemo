@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>34770CE9-B7A8-4AA8-8109-C6E2E152C0A7</string>
+	<key>IDESourceControlProjectName</key>
+	<string>PicScanDemo</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>8F930F178B7CC2B735852BAE198A75177EA15728</key>
+		<string>https://github.com/JasonZXH/PicScanDemo.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>PicScanDemo.xcodeproj</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>8F930F178B7CC2B735852BAE198A75177EA15728</key>
+		<string>../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/JasonZXH/PicScanDemo.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>8F930F178B7CC2B735852BAE198A75177EA15728</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>8F930F178B7CC2B735852BAE198A75177EA15728</string>
+			<key>IDESourceControlWCCName</key>
+			<string>PicScanDemo</string>
+		</dict>
+	</array>
+</dict>
+</plist>
