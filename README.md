@@ -1,4 +1,4 @@
-![image](https://github.com/JasonZXH/Pictures-master/picScanGif.gif)
+![Alt Text](https://github.com/JasonZXH/PicScanDemo/blob/master/ppppp.gif?raw=true)
 # Usage
 1、copy 
 ZXHPicScan.h
