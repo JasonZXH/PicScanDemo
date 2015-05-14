@@ -1,5 +1,4 @@
-https://github.com/JasonZXH/Pictures.git/Pictures/picScanGif.gif
-https://github.com/JasonZXH/Pictures.git
+https://github.com/JasonZXH/Pictures/picScanGif.gif
 # Usage
 1、copy 
 ZXHPicScan.h
