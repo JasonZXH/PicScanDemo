@@ -8,6 +8,10 @@
 
 #import <UIKit/UIKit.h>
 
+/**
+ *  此类为内部调用
+ */
+
 @protocol ZXHPicScanViewControllerDelegate <NSObject>
 
 - (void)disappearThisViewWithCurrentPage:(NSInteger)currPage;
