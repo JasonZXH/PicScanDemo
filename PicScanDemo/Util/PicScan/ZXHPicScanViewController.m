@@ -27,7 +27,7 @@
     
     UIPageControl *_pageControl;    
 }
-@property(nonatomic, strong)NSArray *imageArray;// 存放图片对象的数组
+@property(nonatomic, strong)NSArray *imageViewArray;// 存放图片对象的数组
 @property(nonatomic, strong)NSArray *imageUrlArray; // 存放image的URL
 
 @property(nonatomic, strong)UIScrollView *bgBigScroll;// 存放小ScrollView的 大ScrollView
@@ -43,7 +43,7 @@
 
 - (instancetype)initWithTotalPageCount:(NSInteger)theTotalPageCount
                         andCurrentPage:(NSInteger)theCurrentPage
-                         andImageArray:(NSMutableArray *)theImageArray {
+                     andImageViewArray:(NSMutableArray *)theImageViewArray {
     
     if ((self = [super init])) {
         // 取宽、高
@@ -52,8 +52,9 @@
         window_Hight = window.frame.size.height;
         currPage = theCurrentPage;
         totalImageCount = theTotalPageCount;
-        self.imageArray = [theImageArray copy];
+        self.imageViewArray = [theImageViewArray copy];
         _isImage = YES;
+        _isImageURL = NO;
         _willDisappear = NO;
     }
     return self;
@@ -72,6 +73,8 @@
         totalImageCount = theTotalPageCount;
         self.imageUrlArray = [theImageURLArray copy];
         _isImageURL = YES;
+        _isImage = NO;
+        _willDisappear = NO;
     }
     return self;
 }
@@ -168,7 +171,8 @@
         // 传Image时
         if (_isImage) {
             
-            UIImage *theImage = self.imageArray[i];
+            UIImageView *theImageView = self.imageViewArray[i];
+            UIImage *theImage = theImageView.image;
             
             UIImageView *imageView = [[UIImageView alloc] init];
             

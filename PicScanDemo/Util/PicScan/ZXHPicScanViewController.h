@@ -21,7 +21,7 @@
 + (CGRect)calculateRectWithTheImage:(UIImage*)theImage;
 
 // currentPage从0开始
-- (instancetype)initWithTotalPageCount:(NSInteger)theTotalPageCount andCurrentPage:(NSInteger)theCurrentPage andImageArray:(NSMutableArray*)theImageArray;
+- (instancetype)initWithTotalPageCount:(NSInteger)theTotalPageCount andCurrentPage:(NSInteger)theCurrentPage andImageViewArray:(NSMutableArray*)theImageViewArray;
 
 - (instancetype)initWithTotalPageCount:(NSInteger)theTotalPageCount andCurrentPage:(NSInteger)theCurrentPage andImageURLArray:(NSMutableArray*)theImageURLArray;
 

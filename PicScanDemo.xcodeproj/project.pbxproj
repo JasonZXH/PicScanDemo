@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E78694DA1B09D457001BE70F /* E.jpg in Resources */ = {isa = PBXBuildFile; fileRef = E78694D91B09D457001BE70F /* E.jpg */; };
 		E7A953831B044B0600B626BE /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = E7A953821B044B0600B626BE /* main.m */; };
 		E7A953861B044B0600B626BE /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E7A953851B044B0600B626BE /* AppDelegate.m */; };
 		E7A9538E1B044B0600B626BE /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E7A9538D1B044B0600B626BE /* Images.xcassets */; };
@@ -47,6 +48,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		E78694D91B09D457001BE70F /* E.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = E.jpg; sourceTree = "<group>"; };
 		E7A9537D1B044B0600B626BE /* PicScanDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PicScanDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E7A953811B044B0600B626BE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E7A953821B044B0600B626BE /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -141,6 +143,7 @@
 		E7A9537F1B044B0600B626BE /* PicScanDemo */ = {
 			isa = PBXGroup;
 			children = (
+				E78694D91B09D457001BE70F /* E.jpg */,
 				E7A953841B044B0600B626BE /* AppDelegate.h */,
 				E7A953851B044B0600B626BE /* AppDelegate.m */,
 				E7A953A61B044BF100B626BE /* RootViewController.h */,
@@ -327,6 +330,7 @@
 				E7A953EA1B04683B00B626BE /* placeholderImage@2x.png in Resources */,
 				E7A953E91B04683B00B626BE /* placeholderImage.png in Resources */,
 				E7A9538E1B044B0600B626BE /* Images.xcassets in Resources */,
+				E78694DA1B09D457001BE70F /* E.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -552,6 +556,7 @@
 				E7A953A21B044B0600B626BE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		E7A953A31B044B0600B626BE /* Build configuration list for PBXNativeTarget "PicScanDemoTests" */ = {
 			isa = XCConfigurationList;
@@ -560,6 +565,7 @@
 				E7A953A51B044B0600B626BE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

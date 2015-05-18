@@ -62,7 +62,37 @@ ZXHPicScanDelegate
     self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
     self.tableView.separatorColor = [UIColor clearColor];
     [self.view addSubview:self.tableView];
+    
+    
+    UIWindow *window = [UIApplication sharedApplication].keyWindow;
+    CGFloat kWindow_Width = window.bounds.size.width;
+    
+    UIView *headView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, kWindow_Width, 100)];
+    self.tableView.tableHeaderView = headView;
+    
+    UIImageView *imageView = [[UIImageView alloc] initWithFrame:CGRectMake((kWindow_Width - 80)/2, 20, 80, 60)];
+    imageView.image = [UIImage imageNamed:@"E.jpg"];
+    imageView.userInteractionEnabled = YES;
+    [headView addSubview:imageView];
+    
+    // 添加手势
+    UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(tap:)];
+    [imageView addGestureRecognizer:tap];
 }
+
+- (void)tap:(UITapGestureRecognizer *)sender {
+ 
+/*******  调用方法方法1 **********/
+    // 点击放大查看本地图片，不需要进行网络请求
+    UIImageView *imageView = (UIImageView*)sender.view;
+    if (nil == _zxhPicScan) {
+        _zxhPicScan = [[ZXHPicScan alloc] init];
+        _zxhPicScan.delegate = self;
+    }
+    [_zxhPicScan showPicScanWithCurrentPage:0 andOriginImageViewArray:@[imageView]];
+
+}
+/*******************************/
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
@@ -86,18 +116,22 @@ ZXHPicScanDelegate
     
     
     NSArray *imageURLArr = [[NSArray alloc] initWithArray:self.dataListArray[row][@"pic"]];
-/*******  调用方法方法  **********/
-    // 图片浏览
+/*******  调用方法方法2 **********/
+    // 点击放大查看，需要网络请求，传URL
     if (nil == _zxhPicScan) {
         _zxhPicScan = [[ZXHPicScan alloc] init];
         _zxhPicScan.delegate = self;
     }
-    [_zxhPicScan showPicScanWithCurrentPage:currPage andOriginImageViewArray:[theImageViewArray copy] andImageURLArray:imageURLArr];
+    [_zxhPicScan showPicScanWithCurrentPage:currPage
+                    andOriginImageViewArray:[theImageViewArray copy]
+                           andImageURLArray:imageURLArr];
 }
 
 #pragma mark - 
 - (void)disappearThePicScan {
-    _zxhPicScan = nil;
+    if (_zxhPicScan) {
+        _zxhPicScan = nil;
+    }
 }
 /*******************************/
 

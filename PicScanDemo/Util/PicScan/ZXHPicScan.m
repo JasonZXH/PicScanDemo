@@ -79,7 +79,7 @@
             
             if (nil == theImageURLArray) {
                 // 注：currentPage 从0开始
-                _picScanVC = [[ZXHPicScanViewController alloc] initWithTotalPageCount:theImageURLArray.count andCurrentPage:currPage andImageArray:[theOriginImageViewArray mutableCopy]];
+                _picScanVC = [[ZXHPicScanViewController alloc] initWithTotalPageCount:theOriginImageViewArray.count andCurrentPage:currPage andImageViewArray:[theOriginImageViewArray mutableCopy]];
                 _picScanVC.delegate = self;
                 
             } else {
