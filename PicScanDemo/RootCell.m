@@ -55,7 +55,7 @@
             imageView.tag = (row + 1) * 10000 + i;
             imageView.image = nil;
             
-            [imageView sd_setImageWithURL:[NSURL URLWithString:picArr[i]] placeholderImage:[UIImage imageNamed:@"placeholderPic.png"]];
+            [imageView sd_setImageWithURL:[NSURL URLWithString:picArr[i]] placeholderImage:[UIImage imageNamed:@"placeholderImage.png"]];
         } else {
             imageView.image = nil;
             imageView.hidden = YES;

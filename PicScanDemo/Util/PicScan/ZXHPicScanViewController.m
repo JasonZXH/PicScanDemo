@@ -190,12 +190,27 @@
             
             NSURL *url = [NSURL URLWithString:self.imageUrlArray[i]];
             UIImage *image = [UIImage imageNamed:@"placeholderImage.png"];
-            [imageView sd_setImageWithURL:url placeholderImage:image completed:^(UIImage *image, NSError *error, SDImageCacheType cacheType, NSURL *imageURL) {
-                
-                imageView.frame = [ZXHPicScanViewController calculateRectWithTheImage:imageView.image];
-            }];
             
             [imageScroll addSubview:imageView];
+            
+            // 添加网络请求标志
+            UIActivityIndicatorView *activityIndicatorView = [[UIActivityIndicatorView alloc] initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleWhiteLarge];
+            activityIndicatorView.frame =  CGRectMake((window_Width - 50)/2, (window_Hight - 50)/2, 50.0F, 50.0F);
+            activityIndicatorView.hidesWhenStopped = YES;
+            [imageScroll addSubview:activityIndicatorView];
+            [activityIndicatorView startAnimating];
+            
+            // SD开始请求
+            [imageView sd_setImageWithURL:url placeholderImage:image completed:^(UIImage *image, NSError *error, SDImageCacheType cacheType, NSURL *imageURL) {
+                
+                if (-1100 == error.code) {
+                    NSLog(@"请检查网络");
+                    NSLog(@"%@", error);
+                }
+                imageView.frame = [ZXHPicScanViewController calculateRectWithTheImage:imageView.image];
+                [activityIndicatorView stopAnimating];
+            }];
+            
         }
     }
 }

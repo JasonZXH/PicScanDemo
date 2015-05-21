@@ -22,6 +22,9 @@
 
 @end
 
+static CGFloat kWindow_Width;
+static CGFloat kWindow_Height;
+
 @implementation ZXHPicScan
 
 - (instancetype)init
@@ -35,6 +38,8 @@
 
 - (void)loadSubviews {
     UIWindow *window = [UIApplication sharedApplication].keyWindow;
+    kWindow_Width = window.bounds.size.width;
+    kWindow_Height = window.bounds.size.height;
     // 黑色背景
     _scanBackView = [[UIView alloc] initWithFrame:window.bounds];
     _scanBackView.backgroundColor = [UIColor blackColor];
@@ -65,7 +70,12 @@
     _scanImageView.image = theImageView.image;
 
     // 计算展示出来后的位置
-    CGRect newRect = (CGRect)[ZXHPicScanViewController calculateRectWithTheImage:theImageView.image];
+    CGRect newRect;
+    if (nil != theImageView.image) {
+        newRect = (CGRect)[ZXHPicScanViewController calculateRectWithTheImage:theImageView.image];
+    } else {
+        newRect = CGRectMake(kWindow_Width/2, kWindow_Height/2, 0, 0);
+    }
     
     [UIView animateWithDuration:0.3 animations:^{
         _scanBackView.alpha = 1.0;

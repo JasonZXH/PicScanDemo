@@ -127,7 +127,7 @@ ZXHPicScanDelegate
                            andImageURLArray:imageURLArr];
 }
 
-#pragma mark - 
+#pragma mark - ZXHPicScanDelegate
 - (void)disappearThePicScan {
     if (_zxhPicScan) {
         _zxhPicScan = nil;
