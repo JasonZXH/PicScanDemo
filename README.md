@@ -1,18 +1,20 @@
 ![Alt Text](https://github.com/JasonZXH/PicScanDemo/blob/master/ppppp.gif?raw=true)
 # Usage
-1、copy 
+## 1、Copy the following file to your project
 ZXHPicScan.h
 ZXHPicScan.m
 ZXHPicScanViewController.h
 ZXHPicScanViewController.m
-2、Add the following import to the top of the file:
+## 2、Add the following import to the top of the file:
 ```
 #import "ZXHPicScan.h"
 @interface RootViewController ()<ZXHPicScanDelegate>
 {
     ZXHPicScan *_zxhPicScan;
 }
-
+```
+## 1、浏览本地图片，需要提供将要展示的imageView，以便取到其相对于Window的位置
+```
 - (void)xxxxx {
 
     if (nil == _zxhPicScan) {
@@ -27,7 +29,9 @@ ZXHPicScanViewController.m
  */
     [_zxhPicScan showPicScanWithCurrentPage:0 andOriginImageViewArray:@[imageView]];
 }
-
+```
+## 2、浏览网络图片，需要有图片的Url 和原始图片ImageView的位置
+```
 - (void)xxxxxxxx {
 
     if (nil == _zxhPicScan) {
@@ -44,7 +48,9 @@ ZXHPicScanViewController.m
  */
     [_zxhPicScan showPicScanWithCurrentPage:currPage andOriginImageViewArray:[theImageViewArray copy] andImageURLArray:imageURLArr];
 }
-
+```
+## 3、推出浏览时的回调，将ZXHPicScan的对象置为nil
+```
 #pragma mark - ZXHPicScanDelegate 
 - (void)disappearThePicScan {
     _zxhPicScan = nil;
