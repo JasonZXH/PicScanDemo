@@ -1,10 +1,10 @@
 ![Alt Text](https://github.com/JasonZXH/PicScanDemo/blob/master/ppppp.gif?raw=true)
-# Usage
-### 1、Copy the following file to your project
-ZXHPicScan.h
-ZXHPicScan.m
-ZXHPicScanViewController.h
-ZXHPicScanViewController.m
+## Prepare
+### 1、Copy the following file to your project: 把下面四个文件拷贝到你的工程中
+ZXHPicScan.h <br>
+ZXHPicScan.m <br>
+ZXHPicScanViewController.h <br>
+ZXHPicScanViewController.m <br>
 ### 2、Add the following import to the top of the file:
 ```
 #import "ZXHPicScan.h"
@@ -13,6 +13,8 @@ ZXHPicScanViewController.m
     ZXHPicScan *_zxhPicScan;
 }
 ```
+
+## Usage
 ### 1、浏览本地图片，需要提供将要展示的imageView，以便取到其相对于Window的位置
 ```
 - (void)xxxxx {
