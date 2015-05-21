@@ -201,15 +201,19 @@
             [activityIndicatorView startAnimating];
             
             // SD开始请求
-            [imageView sd_setImageWithURL:url placeholderImage:image completed:^(UIImage *image, NSError *error, SDImageCacheType cacheType, NSURL *imageURL) {
-                
+            [imageView sd_setImageWithURL:url placeholderImage:image options:SDWebImageRetryFailed completed:^(UIImage *image, NSError *error, SDImageCacheType cacheType, NSURL *imageURL) {
                 if (-1100 == error.code) {
                     NSLog(@"请检查网络");
                     NSLog(@"%@", error);
                 }
                 imageView.frame = [ZXHPicScanViewController calculateRectWithTheImage:imageView.image];
                 [activityIndicatorView stopAnimating];
+
             }];
+//            [imageView sd_setImageWithURL:url placeholderImage:image completed:^(UIImage *image, NSError *error, SDImageCacheType cacheType, NSURL *imageURL) {
+//                
+//                
+//            }];
             
         }
     }
