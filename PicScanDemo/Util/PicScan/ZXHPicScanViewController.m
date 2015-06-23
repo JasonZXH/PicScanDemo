@@ -117,8 +117,8 @@
     
     CGRect theRect;
     
-    CGFloat scaleX = window_Width / theImage.size.width;
-    CGFloat scaleY = window_Height / theImage.size.height;
+    CGFloat scaleX = theImage.size.width == 0 ? 0 : window_Width / theImage.size.width;
+    CGFloat scaleY = theImage.size.height == 0 ? 0 : window_Height / theImage.size.height;
     if (scaleX > scaleY) {// 优先照顾Y轴
         
         CGFloat height = window_Height; // scaleY
@@ -202,6 +202,7 @@
             
             // SD开始请求
             [imageView sd_setImageWithURL:url placeholderImage:image options:SDWebImageRetryFailed completed:^(UIImage *image, NSError *error, SDImageCacheType cacheType, NSURL *imageURL) {
+//                NSURLErrorNotConnectedToInternet
                 if (-1100 == error.code) {
                     NSLog(@"请检查网络");
                     NSLog(@"%@", error);
